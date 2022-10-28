@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:money_app/presentation/pages/login/login_page.dart';
+import 'package:money_app/presentation/pages/detail/detail_page.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 class Application extends StatelessWidget {
@@ -29,7 +29,7 @@ class Application extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.manropeTextTheme(),
       ),
-      home: LoginPage(),
+      home: const DetailPage(),
     );
   }
 }

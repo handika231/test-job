@@ -17,3 +17,10 @@ Color greyText = const Color(0xffa6a6a6);
 Color black = Colors.black;
 
 Color white = Colors.white;
+
+Color greyBackground = const Color(0xffF2F3F3);
+
+Color blueCircle = const Color(0xffD1ECFF);
+
+Color greyCard = const Color(0xffE5E7E7);
+Color blueCard = const Color(0xff199EFF);

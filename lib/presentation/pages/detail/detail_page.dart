@@ -184,7 +184,7 @@ class DetailPage extends StatelessWidget {
                                 Get.back();
                               },
                               btnOkOnPress: () {
-                                Get.off(() => const MainPage());
+                                Get.off(() => MainPage());
                               },
                             ).show();
                           },

@@ -1,7 +1,9 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:money_app/common/extension.dart';
 import 'package:money_app/common/style.dart';
+import 'package:money_app/presentation/pages/home/main_page.dart';
 
 import 'widgets/header_detail_widget.dart';
 import 'widgets/select_card_detail_widget.dart';
@@ -171,7 +173,21 @@ class DetailPage extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                             minimumSize: Size(Get.width, 50),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            AwesomeDialog(
+                              context: context,
+                              dialogType: DialogType.success,
+                              animType: AnimType.scale,
+                              title: 'Success',
+                              desc: 'Complete to send your Money',
+                              btnCancelOnPress: () {
+                                Get.back();
+                              },
+                              btnOkOnPress: () {
+                                Get.off(() => const MainPage());
+                              },
+                            ).show();
+                          },
                           child: Text(
                             "Send money",
                             style: TextStyle(

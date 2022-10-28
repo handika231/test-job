@@ -81,9 +81,9 @@ class LoginPage extends StatelessWidget {
                       pageSnapping: true,
                       controller: controller.pageController,
                       onPageChanged: controller.changeIndex,
-                      children: const [
+                      children: [
                         LoginWidget(),
-                        RegisterWidget(),
+                        const RegisterWidget(),
                       ],
                     );
                   },

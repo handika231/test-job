@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:money_app/common/style.dart';
+import 'package:money_app/presentation/controller/login_controller.dart';
 
 import 'social_widget.dart';
 
 class LoginWidget extends StatelessWidget {
-  const LoginWidget({
+  final loginController = Get.find<LoginController>();
+  LoginWidget({
     Key? key,
   }) : super(key: key);
 
@@ -41,12 +45,16 @@ class LoginWidget extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: CheckboxListTile(
-                  contentPadding: EdgeInsets.zero,
-                  value: false,
-                  onChanged: (value) {},
-                  controlAffinity: ListTileControlAffinity.leading,
-                  title: const Text('Remember me'),
+                child: Obx(
+                  () => CheckboxListTile(
+                    contentPadding: EdgeInsets.zero,
+                    value: loginController.isRemember.value,
+                    onChanged: (value) {
+                      loginController.isRemember.toggle();
+                    },
+                    controlAffinity: ListTileControlAffinity.leading,
+                    title: const Text('Remember me'),
+                  ),
                 ),
               ),
               const Expanded(
@@ -72,8 +80,11 @@ class LoginWidget extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          const Text(
+          Text(
             'Or Connect With',
+            style: TextStyle(
+              color: greyText,
+            ),
             textAlign: TextAlign.center,
           ),
           const SizedBox(

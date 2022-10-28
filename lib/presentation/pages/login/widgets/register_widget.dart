@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../common/style.dart';
 import 'social_widget.dart';
 
 class RegisterWidget extends StatelessWidget {
@@ -47,42 +48,23 @@ class RegisterWidget extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
-          Row(
-            children: [
-              Expanded(
-                child: CheckboxListTile(
-                  contentPadding: EdgeInsets.zero,
-                  value: false,
-                  onChanged: (value) {},
-                  controlAffinity: ListTileControlAffinity.leading,
-                  title: const Text('Remember me'),
-                ),
-              ),
-              const Expanded(
-                child: Text(
-                  'Forgot Password?',
-                  textAlign: TextAlign.end,
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 40,
-          ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(double.infinity, 45),
             ),
             onPressed: () {},
             child: const Text(
-              "Login",
+              "Register",
             ),
           ),
           const SizedBox(
             height: 16,
           ),
-          const Text(
+          Text(
             'Or Connect With',
+            style: TextStyle(
+              color: greyText,
+            ),
             textAlign: TextAlign.center,
           ),
           const SizedBox(

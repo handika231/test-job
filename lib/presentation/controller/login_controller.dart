@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class LoginController extends GetxController {
+  RxBool isRemember = false.obs;
   int currentIndex = 0;
 
   late final PageController pageController;

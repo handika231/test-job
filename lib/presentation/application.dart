@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:money_app/presentation/pages/home_page.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -25,6 +26,9 @@ class Application extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'Money App',
+      theme: ThemeData(
+        textTheme: GoogleFonts.manropeTextTheme(),
+      ),
       home: const HomePage(),
     );
   }

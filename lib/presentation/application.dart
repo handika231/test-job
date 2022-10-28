@@ -29,7 +29,7 @@ class Application extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.manropeTextTheme(),
       ),
-      home: const LoginPage(),
+      home: LoginPage(),
     );
   }
 }

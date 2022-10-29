@@ -10,6 +10,7 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

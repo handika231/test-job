@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:money_app/common/style.dart';
+import 'package:money_app/injector.dart' as di;
 
 import '../../controller/login_controller.dart';
 import 'widgets/footer_login_widget.dart';
@@ -10,7 +11,7 @@ import 'widgets/register_widget.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
-  final loginController = Get.put(LoginController());
+  final loginController = Get.put(di.locator<LoginController>());
 
   @override
   Widget build(BuildContext context) {

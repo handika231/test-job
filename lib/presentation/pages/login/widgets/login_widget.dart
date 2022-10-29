@@ -22,8 +22,9 @@ class LoginWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const TextField(
-            decoration: InputDecoration(
+          TextField(
+            controller: loginController.emailController,
+            decoration: const InputDecoration(
               hintText: 'Email',
               prefixIcon: Icon(Icons.email),
             ),
@@ -33,6 +34,7 @@ class LoginWidget extends StatelessWidget {
           ),
           Obx(
             () => TextField(
+              controller: loginController.passwordController,
               obscureText: loginController.isPasswordVisible.value,
               decoration: InputDecoration(
                 hintText: 'Password',
@@ -83,7 +85,9 @@ class LoginWidget extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(double.infinity, 45),
             ),
-            onPressed: () {},
+            onPressed: () {
+              loginController.login();
+            },
             child: const Text(
               "Login",
             ),

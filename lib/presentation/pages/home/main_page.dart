@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:money_app/injector.dart' as di;
 
 import '../../controller/main_controller.dart';
 
 class MainPage extends StatelessWidget {
   MainPage({super.key});
 
-  final controller = Get.put(MainController());
+  final controller = Get.put(di.locator<MainController>());
 
   @override
   Widget build(BuildContext context) {

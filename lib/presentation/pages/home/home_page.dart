@@ -15,8 +15,8 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: const [
-              HeaderHomeWidget(),
+            children: [
+              const HeaderHomeWidget(),
               ContentHomeWidget(),
             ],
           ),

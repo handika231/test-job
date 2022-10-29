@@ -22,8 +22,9 @@ class RegisterWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const TextField(
-            decoration: InputDecoration(
+          TextField(
+            controller: loginController.emailRegisterController,
+            decoration: const InputDecoration(
               hintText: 'Email',
               prefixIcon: Icon(Icons.email),
             ),
@@ -31,8 +32,9 @@ class RegisterWidget extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const TextField(
-            decoration: InputDecoration(
+          TextField(
+            controller: loginController.nameRegisterController,
+            decoration: const InputDecoration(
               hintText: 'Name',
               prefixIcon: Icon(Icons.person),
             ),
@@ -42,6 +44,7 @@ class RegisterWidget extends StatelessWidget {
           ),
           Obx(
             () => TextField(
+              controller: loginController.passwordRegisterController,
               obscureText: loginController.isPasswordVisible.value,
               decoration: InputDecoration(
                 hintText: 'Password',
@@ -66,7 +69,9 @@ class RegisterWidget extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(double.infinity, 45),
             ),
-            onPressed: () {},
+            onPressed: () {
+              loginController.register();
+            },
             child: const Text(
               "Register",
             ),

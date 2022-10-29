@@ -24,3 +24,5 @@ Color blueCircle = const Color(0xffD1ECFF);
 
 Color greyCard = const Color(0xffE5E7E7);
 Color blueCard = const Color(0xff199EFF);
+
+Color greyFeature = const Color(0xffF2F3F3);

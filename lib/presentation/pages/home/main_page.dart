@@ -17,8 +17,14 @@ class MainPage extends StatelessWidget {
           onTap: controller.changeIndex,
           type: BottomNavigationBarType.fixed,
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.wallet), label: ''),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.wallet),
+              label: '',
+            ),
             BottomNavigationBarItem(
               icon: Icon(Icons.card_giftcard_rounded),
               label: '',

@@ -175,9 +175,7 @@ class ContentDetailWidget extends StatelessWidget {
                         animType: AnimType.scale,
                         title: 'Success',
                         desc: 'Complete to send your Money',
-                        btnCancelOnPress: () {
-                          Get.back();
-                        },
+                        btnCancelOnPress: () {},
                         btnOkOnPress: () {
                           Get.off(() => MainPage());
                         },

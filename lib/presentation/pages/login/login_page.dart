@@ -83,7 +83,7 @@ class LoginPage extends StatelessWidget {
                       onPageChanged: controller.changeIndex,
                       children: [
                         LoginWidget(),
-                        const RegisterWidget(),
+                        RegisterWidget(),
                       ],
                     );
                   },

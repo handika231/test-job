@@ -5,6 +5,8 @@ class LoginController extends GetxController {
   RxBool isRemember = false.obs;
   int currentIndex = 0;
 
+  RxBool isPasswordVisible = false.obs;
+
   late final PageController pageController;
 
   @override

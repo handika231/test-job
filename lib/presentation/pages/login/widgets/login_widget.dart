@@ -31,12 +31,23 @@ class LoginWidget extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const TextField(
-            obscureText: true,
-            decoration: InputDecoration(
-              hintText: 'Password',
-              prefixIcon: Icon(Icons.lock),
-              suffixIcon: Icon(Icons.visibility),
+          Obx(
+            () => TextField(
+              obscureText: loginController.isPasswordVisible.value,
+              decoration: InputDecoration(
+                hintText: 'Password',
+                prefixIcon: const Icon(Icons.lock),
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    loginController.isPasswordVisible.toggle();
+                  },
+                  icon: Icon(
+                    loginController.isPasswordVisible.value
+                        ? Icons.visibility
+                        : Icons.visibility_off,
+                  ),
+                ),
+              ),
             ),
           ),
           const SizedBox(

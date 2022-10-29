@@ -1,16 +1,75 @@
-# money_app
+# Flutter App: Money Transfer App
 
-A new Flutter project.
+### Description
+Create simple app to complete test of Job using Flutter and API from [Dummy Data](https://test-api.afg-indo.com/)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+### Using API
+<br/>
 
-A few resources to get you started if this is your first Flutter project:
+#### To Get All Products
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```http
+  GET /api/products
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Image Source
+
+```http
+  GET /storage/product_images/{image.jpg}
+```
+#### Login
+
+```http
+  GET /api/login
+```
+
+| Parameter | Type     |
+| :-------- | :------- |
+| `email` | `string` |
+| `password` | `string` |
+
+#### Register
+
+```http
+  POST /api/register
+```
+
+| Parameter | Type     |
+| :-------- | :------- |
+| `email` | `string` |
+| `password` | `string` |
+| `name` | `string` |
+
+
+### Features
+- Login with email and password
+- Register
+- Consume API
+- Testing
+
+
+### Package
+- Google_fonts
+- Mockito
+- Build_runner
+- Get
+- Get_it
+- Dio
+- Responsive_Framework
+- awesome_dialog
+- freezed_annotation
+- freezed
+- json_annotation
+- json_serializable
+
+### Tech Used
+![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
+
+
+## Screenshots
+
+
+
+ <img src="screenshot/ss.png"    />
+

@@ -5,7 +5,6 @@ Create simple app to complete test of Job using Flutter and API from [Dummy Data
 
 
 ### Using API
-<br/>
 
 #### To Get All Products
 
